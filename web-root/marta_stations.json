@@ -1,0 +1,364 @@
+{
+  "type": "FeatureCollection",
+  "features": [{
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-84.387125, 33.789283]
+    },
+    "properties": {
+      "cartodb_id": 1,
+      "station_name": "ARTS CENTER STATION",
+      "stop1": 901789,
+      "stop2": null
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-84.417371, 33.756066]
+    },
+    "properties": {
+      "cartodb_id": 2,
+      "station_name": "ASHBY STATION",
+      "stop1": 904642,
+      "stop2": null
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-84.282053, 33.774113]
+    },
+    "properties": {
+      "cartodb_id": 3,
+      "station_name": "AVONDALE STATION",
+      "stop1": 210548,
+      "stop2": 904264
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-84.428677, 33.77206]
+    },
+    "properties": {
+      "cartodb_id": 4,
+      "station_name": "BUCKHEAD STATION",
+      "stop1": 904519,
+      "stop2": null
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-84.339147, 33.86025]
+    },
+    "properties": {
+      "cartodb_id": 5,
+      "station_name": "BROOKHAVEN STATION",
+      "stop1": 905697,
+      "stop2": null
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-84.305039, 33.887675]
+    },
+    "properties": {
+      "cartodb_id": 6,
+      "station_name": "CHAMBLEE STATION",
+      "stop1": 905514,
+      "stop2": 905515
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-84.448465, 33.651937]
+    },
+    "properties": {
+      "cartodb_id": 7,
+      "station_name": "COLLEGE PARK STATION",
+      "stop1": 166901,
+      "stop2": 166900
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-84.297516, 33.774663]
+    },
+    "properties": {
+      "cartodb_id": 8,
+      "station_name": "DECATUR STATION",
+      "stop1": 904262,
+      "stop2": 904263
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-84.280467, 33.902424]
+    },
+    "properties": {
+      "cartodb_id": 9,
+      "station_name": "DORAVILLE STATION",
+      "stop1": 905508,
+      "stop2": null
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-84.344734, 33.920969]
+    },
+    "properties": {
+      "cartodb_id": 10,
+      "station_name": "DUNWOODY STATION",
+      "stop1": 903009,
+      "stop2": null
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-84.312734, 33.76451]
+    },
+    "properties": {
+      "cartodb_id": 11,
+      "station_name": "EAST LAKE STATION",
+      "stop1": 904323,
+      "stop2": null
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-84.44046, 33.67657]
+    },
+    "properties": {
+      "cartodb_id": 12,
+      "station_name": "EAST POINT STATION",
+      "stop1": 146900,
+      "stop2": 146500
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-84.339945, 33.762484]
+    },
+    "properties": {
+      "cartodb_id": 13,
+      "station_name": "EDGEWOOD-CANDLER PARK STATION",
+      "stop1": 904464,
+      "stop2": 904322
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-84.389407, 33.753346]
+    },
+    "properties": {
+      "cartodb_id": 14,
+      "station_name": "FIVE POINTS STATION",
+      "stop1": 211627,
+      "stop2": 102236
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-84.385434, 33.749764]
+    },
+    "properties": {
+      "cartodb_id": 15,
+      "station_name": "GEORGIA STATE STATION",
+      "stop1": 210431,
+      "stop2": 210709
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-84.468834, 33.754277]
+    },
+    "properties": {
+      "cartodb_id": 16,
+      "station_name": "HAMILTON E HOLMES STATION",
+      "stop1": 901140,
+      "stop2": 903320
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-84.229424, 33.769764]
+    },
+    "properties": {
+      "cartodb_id": 17,
+      "station_name": "INDIAN CREEK STATION",
+      "stop1": 903391,
+      "stop2": null
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-84.353409, 33.757726]
+    },
+    "properties": {
+      "cartodb_id": 18,
+      "station_name": "INMAN PARK-REYNOLDSTOWN STATION",
+      "stop1": 901155,
+      "stop2": 901066
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-84.252236, 33.772472]
+    },
+    "properties": {
+      "cartodb_id": 19,
+      "station_name": "KENSINGTON STATION",
+      "stop1": 900686,
+      "stop2": null
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-84.429541, 33.700649]
+    },
+    "properties": {
+      "cartodb_id": 20,
+      "station_name": "LAKEWOOD STATION",
+      "stop1": 136901,
+      "stop2": null
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-84.357791, 33.845015]
+    },
+    "properties": {
+      "cartodb_id": 21,
+      "station_name": "LENOX STATION",
+      "stop1": 905666,
+      "stop2": null
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-84.36995, 33.823072]
+    },
+    "properties": {
+      "cartodb_id": 22,
+      "station_name": "LINDBERGH STATION",
+      "stop1": 902145,
+      "stop2": null
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-84.351215, 33.910569]
+    },
+    "properties": {
+      "cartodb_id": 23,
+      "station_name": "MEDICAL CENTER STATION",
+      "stop1": 903165,
+      "stop2": null
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-84.386697, 33.78111]
+    },
+    "properties": {
+      "cartodb_id": 24,
+      "station_name": "MIDTOWN STATION",
+      "stop1": 904800,
+      "stop2": null
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-84.38717, 33.77191]
+    },
+    "properties": {
+      "cartodb_id": 25,
+      "station_name": "NORTH AVE STATION",
+      "stop1": 907473,
+      "stop2": null
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-84.357235, 33.945416]
+    },
+    "properties": {
+      "cartodb_id": 26,
+      "station_name": "NORTH SPRINGS STATION",
+      "stop1": 902725,
+      "stop2": null
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-84.426301, 33.717407]
+    },
+    "properties": {
+      "cartodb_id": 27,
+      "station_name": "OAKLAND CITY STATION",
+      "stop1": 123900,
+      "stop2": null
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-84.350818, 33.93149]
+    },
+    "properties": {
+      "cartodb_id": 28,
+      "station_name": "SANDY SPRINGS STATION",
+      "stop1": 903164,
+      "stop2": null
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-84.413542, 33.735899]
+    },
+    "properties": {
+      "cartodb_id": 29,
+      "station_name": "WEST END STATION",
+      "stop1": 114900,
+      "stop2": null
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-84.445389, 33.752833]
+    },
+    "properties": {
+      "cartodb_id": 30,
+      "station_name": "WEST LAKE STATION",
+      "stop1": 900231,
+      "stop2": 900232
+    }
+  }]
+}

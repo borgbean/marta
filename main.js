@@ -12,7 +12,7 @@ function createWindow () {
 
   // and load the index.html of the app.
   win.loadURL(url.format({
-    pathname: path.join(__dirname, 'index.html'),
+    pathname: path.join(__dirname, 'web-root/index.html'),
     protocol: 'file:',
     slashes: true
   }))
@@ -29,7 +29,7 @@ function createWindow () {
   })
 
   doStuff();
-  
+
 }
 
 // This method will be called when Electron has finished
@@ -46,7 +46,7 @@ app.on('window-all-closed', () => {
   }
 })
 
-function doStuff() { 
+function doStuff() {
 }
 
 app.on('activate', () => {
