@@ -38,5 +38,15 @@ parseCrappyTime = function(currentTime, crappyTime) {
     const curDateOnly = currentTime.toString().split(':')[0];
     curDateOnly.substring(0, curDateOnly.lastIndexOf(' '));
     return new Date(curDateOnly + ' ' + crappyTime);
-}
+};
 
+
+// function interpolateBetweenCoords() {
+//     a = sin((1−f)⋅δ) / sin δ
+//     b = sin(f⋅δ) / sin δ
+//     x = a ⋅ cos φ1 ⋅ cos λ1 + b ⋅ cos φ2 ⋅ cos λ2
+//     y = a ⋅ cos φ1 ⋅ sin λ1 + b ⋅ cos φ2 ⋅ sin λ2
+//     z = a ⋅ sin φ1 + b ⋅ sin φ2
+//     φi = atan2(z, √x² + y²)
+//     λi = atan2(y, x)
+// }

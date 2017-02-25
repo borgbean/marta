@@ -2,8 +2,19 @@ var util = require('./util.js');
 var stations = require('./marta_stations.json');
 
 let trainMarkers = [];
+const trainIcon = L.icon({
+    iconUrl: 'icon.png',
+    // shadowUrl: 'leaf-shadow.png',
 
-var interval = setInterval(() => {
+    iconSize:     [35, 35], // size of the icon
+    shadowSize:   [50, 64], // size of the shadow
+    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    shadowAnchor: [4, 62],  // the same for the shadow
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+
+
+const interval = setInterval(() => {
     /*
      [{DESTINATION: "Airport", DIRECTION: "S", EVENT_TIME: "2/24/2017 11:04:16 PM", LINE: "GOLD",…}
      DESTINATION : "Airport"
@@ -23,26 +34,29 @@ var interval = setInterval(() => {
             return response.json().then(function (trainData) {
                 const time = new Date();
 
-                var filteredTrainData = trainData.reduce((trains, train) => {
-                    if(train.TRAIN_ID in trains) {
-                        const newTime = parseCrappyTime(time, train.NEXT_ARR);
-                        const oldTime = parseCrappyTime(time, trains[train.TRAIN_ID].NEXT_ARR);
-                        if(newTime > time && oldTime > newTime) {
+                const filteredTrainData = trainData.reduce((trains, train) => {
+                    if(train.WAITING_TIME === 'Boarding' || train.WAITING_TIME === 'Arriving') {
+                        trains[train.TRAIN_ID] = train;
+                    } else {
+                        if(train.TRAIN_ID in trains) {
+                            const newTime = parseCrappyTime(time, train.NEXT_ARR);
+                            const oldTime = parseCrappyTime(time, trains[train.TRAIN_ID].NEXT_ARR);
+                            if(newTime > time && (oldTime > newTime || oldTime < time)
+                                && !(trains[train.TRAIN_ID].WAITING_TIME === 'Boarding' || trains[train.TRAIN_ID].WAITING_TIME === 'Arriving')) {
+                                trains[train.TRAIN_ID] = train;
+                            }
+                        } else {
                             trains[train.TRAIN_ID] = train;
                         }
-                    } else {
-                        trains[train.TRAIN_ID] = train;
                     }
 
                     return trains;
                 }, {});
-                var trainDataArr = [];
+                const trainDataArr = [];
                 for(const trainId in filteredTrainData) {
                     trainDataArr.push(filteredTrainData[trainId]);
                 }
 
-                console.log(trainDataArr.filter(train => train.TRAIN_ID == 309326));
-                console.log(trainData.filter(train => train.TRAIN_ID == 309326));
                 const trainList = document.getElementById("train-list");
                 const items = trainList.querySelectorAll('li');
                 Array.prototype.forEach.call(items, item => {
@@ -62,10 +76,7 @@ var interval = setInterval(() => {
                 trainMarkers = [];
 
 
-                // const stationText = {};
                 trainDataArr.forEach(train => {
-                    // if(train.TRAIN_ID == 309326){debugger;}
-
                     const currentStation = train.STATION;
                     const station = stations.features.reduce((min, station) => {
                         const distance = levenshtein(station.properties.station_name, currentStation);
@@ -89,21 +100,21 @@ var interval = setInterval(() => {
                     const lastTime = new Date(train.EVENT_TIME);
                     let nextTime = parseCrappyTime(time, train.NEXT_ARR);
 
-                    const p = (nextTime - time) / (nextTime - lastTime);
-                    console.log(p);
-                    // const p = .5;
-                    // if(p < 0) {return;}//shh
-
-                    // console.log(currentStation + '->' + station.properties.station_name);
-                    // stationText[station.properties.station_name] = (stationText[station.properties.station_name]||[]);
-                    // stationText[station.properties.station_name].push(train.TRAIN_ID);
+                    let p = (nextTime - time) / (nextTime - lastTime);
+                    if(time > nextTime) {
+                        p = 1;
+                    }
+                    if(train.WAITING_TIME === 'Boarding') {p = 0;}
+                    // if(train.WAITING_TIME === 'Arriving') {p = 1;}
 
                     const c1 = station.geometry.coordinates;
                     const c2 = nextStation.geometry.coordinates;
 
+                    //TODO this isn't correct, since the map is flat
+                    //close enough for this though
                     const c1_2 = [(c2[0]-c1[0])*p + c1[0], (c2[1]-c1[1])*p + c1[1]];
 
-                    const marker = L.marker(c1_2)
+                    const marker = L.marker(c1_2,  {icon: trainIcon})
                         .addTo(map)
                         .bindPopup(train.TRAIN_ID);
 
